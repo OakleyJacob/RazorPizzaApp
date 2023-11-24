@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    string imagePath = "D:\\C#s\\RazorPizzaDelivery\\RazorPizzaDelivery\\images\\PizzaTime.jpg";
+
+    // Check if the file exists
+    if (System.IO.File.Exists(imagePath))
+    {
+        Console.WriteLine("This is a log message from Razor Pages");
+
+
+    }
+}
+
+<div class="text-center main-text">
+    <h1 class="display-4">Welcome to my Pizza Delivery Site!</h1>
+    <h2 class="display-4">Built using ASP.net and entity framework. </h2>
+    <img class="mainImage" src="~/images/PizzaTime.jpg" alt="Pizza Image" />
+    
+    <br/>
+
+    <a class=" btn btn-primary mt-1" asp-area="" asp-page="/Pizza" >Order Pizza</a>
+   
+</div>
